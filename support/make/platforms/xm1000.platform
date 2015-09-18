@@ -1,0 +1,64 @@
+# Includes that should take precedence come first.  Platforms come before
+# chips because they may override files.  These must be specified as
+# @includes instead of -I's to @opts, otherwise the %T won't be processed
+# by ncc.
+
+PFLAGS += -I%T/platforms/xm1000
+PFLAGS += -I%T/platforms/xm1000/chips/msp430
+PFLAGS += -I%T/platforms/xm1000/chips/msp430/usci
+PFLAGS += -I%T/platforms/xm1000/chips/msp430/timer
+PFLAGS += -I%T/platforms/xm1000/chips/stm25p
+PFLAGS += -I%T/platforms/xm1000/chips/cc2420
+PFLAGS += -I%T/platforms/xm1000/chips/s1087
+PFLAGS += -I%T/platforms/xm1000/chips/s10871
+PFLAGS += -I%T/platforms/xm1000/chips/sht11
+PFLAGS += -I%T/platforms/epic/chips/ds2411
+PFLAGS += -I%T/chips/ds2411
+PFLAGS += -I%T/chips/cc2420
+PFLAGS += -I%T/chips/cc2420/alarm
+PFLAGS += -I%T/chips/cc2420/control
+PFLAGS += -I%T/chips/cc2420/csma
+PFLAGS += -I%T/chips/cc2420/interfaces
+PFLAGS += -I%T/chips/cc2420/link
+PFLAGS += -I%T/chips/cc2420/lowpan
+PFLAGS += -I%T/chips/cc2420/lpl
+PFLAGS += -I%T/chips/cc2420/packet
+PFLAGS += -I%T/chips/cc2420/receive
+PFLAGS += -I%T/chips/cc2420/spi
+PFLAGS += -I%T/chips/cc2420/transmit
+PFLAGS += -I%T/chips/cc2420/unique
+PFLAGS += -I%T/chips/cc2420/security
+PFLAGS += -I%T/chips/msp430
+PFLAGS += -I%T/chips/msp430/adc12
+PFLAGS += -I%T/chips/msp430/dma
+PFLAGS += -I%T/chips/msp430/pins
+PFLAGS += -I%T/chips/msp430/timer
+PFLAGS += -I%T/chips/msp430/sensors
+PFLAGS += -I%T/chips/msp430/x2xxx
+PFLAGS += -I%T/chips/msp430/x2xxx/usci
+PFLAGS += -I%T/chips/stm25p
+PFLAGS += -I%T/chips/sht11
+PFLAGS += -I%T/lib/timer
+PFLAGS += -I%T/lib/serial
+#PFLAGS += -I%T/lib/adc
+PFLAGS += -I%T/lib/power
+PFLAGS += -I%T/lib/onewire
+   
+#@opts = qw(
+
+#  -gcc=msp430-gcc
+#  -mmcu=msp430x2618
+#  -fnesc-target=msp430
+#  -fnesc-no-debug
+#  -fnesc-scheduler=TinySchedulerC,TinySchedulerC.TaskBasic,TaskBasic,TaskBasic,runTask,postTask
+#);
+
+PFLAGS += -gcc=msp430-gcc
+PFLAGS += -mmcu=msp430f2618
+PFLAGS += -fnesc-target=msp430
+PFLAGS += -fnesc-no-debug
+#PFLAGS += -fnesc-#scheduler=TinySchedulerC,TinySchedulerC.TaskBasic,TaskBasic,TaskBasic,runTask,postTask;
+
+#PFLAGS += -mmcu=msp430x2618;
+#PFLAGS += -mdisable-hwmul;
+
